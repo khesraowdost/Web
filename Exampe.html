@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Academy Awards People's Choice Voting</title>
+  
+  
+  <!--  Example - CDN absolute path -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+   <!--fallback for jQuery if CDN is unavailable-->
+   <!--<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>');</script>-->
+   
+   
+   <!--Example - Relative Path --->
+   <script src="js/scripts.js"></script>
+     
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/jquery-ui.min.css" />
+</head>
+<body>
+  <div id="container">
+	  <header>
+     	<img src="img/logo.jpg" alt="82nd Annual Acadmey Awards Logo" height="100" />
+        <h1>89<sup>th</sup> Annual Academy Awards</h1>
+       
+        <h2>People's Choice Nomination - Nominate &amp; Win!</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">Rules &amp; Regs</a></li>
+            <li><a href="#">2017 Nods</a></li>
+            <li><a href="results.php">Results</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <p>This is an aside for later</p>
+    </aside>
+    <main>
+      <form id="voting" name="voting" action="processvote.php" method="post" novalidate>
+        <div>
+         <label for="name">Name:</label>
+         <input type="text" name="name" id="name" placeholder="Firstname Lastname" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname" required /> 
+        </div>
+           
+        <div> 
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="test@test.com" required />
+          <span class="noerror" id="emailerror">You must enter an email address</span>
+        </div>
+		<div id="dialog" title="Basic dialog">
+ 
+        
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" placeholder="###-###-####" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title ="###-###-####"required /> 
+        </div>
+          
+        <fieldset id="gender">
+            <legend>Gender</legend>
+            
+            <input type="radio" name="gender" id="male" value="M" />
+            <label for="male">Male</label>
+            
+            <input type="radio" name="gender" id="female" value="F" />
+            <label for="male">Female</label>
+           
+        </fieldset>
+        
+        <div>    
+          <label for="movie">Movie Choice:</label>
+          <select name="movie" id="movie">
+              <option value="0">Select One</option>
+              <option value="1">UP</option>
+            
+          </select>
+        </div>            
+            
+        <div>    
+          <input type="checkbox" name="agree" id="agree" required/>
+          <label for="agree">Yes, I am 21 years of age or older, and I acknowledge having read and accepted the Official Contest Rules. </label>
+        </div>
+        <div id="buttons">    
+          <input type="submit" name="send" value="submit Vote" />
+		
+		<div id="dialog-confirm" title="This is your Chance to Vote">
+			<p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Only Chance to vote to your favorite movie stars</p>
+		</div>
+          <input type="reset" value="Cancel"/>
+        </div>
+      </form>
+      
+       
+    </main>
+    <footer>
+      <span>&copy; 2017 Academy of Motion Picture Arts and Sciences</span>
+    </footer>
+  </div>
+    
+</body>
+</html>
